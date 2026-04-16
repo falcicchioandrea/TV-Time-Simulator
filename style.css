@@ -1,0 +1,10 @@
+:root {
+    /* Color Variables */
+    --primary-color: #102a67;
+    --secondary-color: #501f87;
+    --color-bg: #770808;
+}
+
+ul {
+    list-style-type: none;
+}
