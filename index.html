@@ -6,17 +6,125 @@
         <title>TV Time - User Profile</title>
         <meta name="description" content="TV Time - User Profile">
 
-        <link rel="icon" href="#" type="image/x-icon">    <!-- Favicon: da aggiungere -->
+        <link rel="icon" href="assets/favicon.ico" type="image/x-icon">    <!-- Favicon: da aggiungere -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
-
         <!-- Header Section-->
+         <header class="header">
+            <a href="#" class="bell-icon"><i class="fas fa-bell"></i></a> <!-- Dobbiamo aggiungere un file notifiche.html a cui reinderizzare l'utente quando clicca sulla campanella-->
+            <button class="menu-btn" aria-label="Open settings menu"><i class="fas fa-bars"></i></button> <!-- Dobbiamo aggiungere un menu a comparsa quando l'utente clicca sull'icona del menu -->
+         </header>
 
         <!-- Hero Section -->
+         <section class="hero-section" aria-label="User Profile Hero Section">
+            <div class="profile-image">
+                <i class="fas fa-circle-user" id="profile-picture"></i>  <!-- Da gestire con JavaScript -->
+                <label for="upload-image" class="upload-label">Click to change image</label> 
+                <input type="file" id="upload-image" accept="image/*" style="display:none;"> 
+            </div>
+            <div class="profile-details">
+                <h1 id="username">Caricamento...</h1> <!-- Dobbiamo sostituire "Caricamento..."con il nome reale dell'utente, si fa con JavaScript al momento del login -->
+                <button class="edit-profile" aria-label="Edit Profile">MODIFY PROFILE</button>
+            </div>
+         </section>
 
         <!-- Main Section -->
+         <main class="main content">
+            <section class="social-statistics" aria-label="User Social Statistics">
+                <div class="stat-item">
+                    <span class="count" id="following-count">0</span>
+                    <span class="label">following</span>
+                </div>
+                <div class="stat-item">
+                    <span class="count" id="follower-count">0</span>
+                    <span class="label">follower</span>
+                </div>
+                <div class="stat-item">
+                    <span class="count" id="comment-count">0</span>
+                    <span class="label">commenti</span>
+                </div>
+            </section>
+
+            <section class="statistics-section" aria-label="User Watching Statistics">
+                <div class="statistics-header">
+                    <h2>Statistics</h2>
+                    <span class="arrow-icon">></span>
+                </div>
+                <div class="statistics-grid">
+                    <div statistic-card>
+                        <i class="fas solid fa-tv"></i> Series time
+                        <div><span class="count" id="series-months">0</span> MONTHS</div>
+                        <div><span class="count" id="series-days">0</span> DAYS</div>
+                        <div><span class="count" id="series-hours">0</span> HOURS</div>
+                    </div>
+                    <div statistic-card>
+                        <i class="fas solid fa-clapperboard"></i> Episodes watched
+                        <div><span class="count" id="episodes-watched">0</span>
+                        </div>
+                    </div>
+                    <div statistic-card>
+                        <i class="fas solid fa-tv"></i> Films time 
+                        <div><span class="count" id="films-months">0</span> MONTHS</div>
+                        <div><span class="count" id="films-days">0</span> DAYS</div>
+                        <div><span class="count" id="films-hours">0</span> HOURS</div>
+                    </div>
+                    <div statistic-card>
+                        <i class="fas solid fa-clapperboard"></i> Films watched
+                        <div><span class="count" id="films-watched">0</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="series-section" aria-label="User Series Section">
+                <div class="series__header">
+                    <h2>Series</h2>
+                    <span class="arrow-icon">></span>
+                </div>
+
+                <button class="add-box" type="button">
+                    <i class="fas fa-solid fa-plus"></i>
+                    <span>ADD SERIES</span> 
+                </button>
+            </section>
+
+            <section class="favseries-section" aria-label="User Favourite Series Section">
+                <div class="favseries__header">
+                    <h2><i class="fas fa-heart"></i> Favourite Series</h2>
+                    <span class="arrow-icon">></span>
+                </div>
+
+                <button class="add-box" type="button">
+                    <i class="fas fa-solid fa-plus"></i>
+                    <span>ADD FAVOURITE SERIES</span> 
+                </button>
+            </section>
+
+            <section class="films-section" aria-label="User Films Section">
+                <div class="films__header">
+                    <h2>Films</h2>
+                    <span class="arrow-icon">></span>
+                </div>
+
+                <button class="add-box" type="button">
+                    <i class="fas fa-solid fa-plus"></i>
+                    <span>ADD FILMS</span> 
+                </button>
+            </section>
+
+            <section class="favfilms-section" aria-label="User Favourite Films Section">
+                <div class="favfilms__header">
+                    <h2><i class="fas fa-heart"></i> Favourite Films</h2>
+                    <span class="arrow-icon">></span>
+                </div>
+
+                <button class="add-box" type="button">
+                    <i class="fas fa-solid fa-plus"></i>
+                    <span>ADD FAVOURITE FILMS</span> 
+                </button>
+            </section>
+         </main>
 
         <!-- Footer (Navigation Bar) -->
          <footer class="footer" aria-label="Site Footer">
@@ -29,5 +137,7 @@
                 </ul>
             </nav>
          </footer>
+
+         <script src="script.js"></script>
     </body>
 </html>
