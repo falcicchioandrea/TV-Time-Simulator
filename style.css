@@ -5,6 +5,107 @@
     --color-bg: #770808;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /* Include padding e border nella dimensione totale degli elementi */
+}
+
+/* Stile per la barra in alto */
+header {
+    display: flex;              /* Attiva Flexbox: trasforma il contenitore in una riga */
+    justify-content: space-between; /* Spinge il primo elemento a sinistra e l'ultimo a destra */
+    align-items: center;        /* Centra verticalmente le icone se hanno altezze diverse */
+    padding: 15px 20px;         /* Crea respiro dai bordi (sopra-sotto, destra-sinistra) */
+    position: absolute;         /* Lo "stacchiamo" dal flusso per sovrapporlo allo sfondo */
+    width: 100%;                /* Essendo absolute, dobbiamo dirgli di occupare tutta la larghezza */
+    z-index: 10;                /* Lo tiene "sopra" a tutto il resto */
+}
+
+/* Stile specifico per l'icona gialla */
+.bell-icon {
+    color: #ffeb3b;             /* Colore giallo della campana */
+    font-size: 1.3rem;          /* Dimensione dell'icona */
+}
+
+.menu-btn {
+    /* 1. Rimuoviamo gli stili di default del pulsante */
+    background: none;           /* Toglie lo sfondo grigio */
+    border: none;               /* Toglie il bordo nero/grigio */
+    padding: 0;                 /* Rimuove spazi interni extra */
+    cursor: pointer;            /* Fa apparire la "manina" al passaggio del mouse */
+    
+    /* 2. Coloriamo e dimensioniamo l'icona all'interno */
+    color: white;               /* Rende le lineette/puntini bianchi */
+    font-size: 1.3rem;          /* Ingrandisce l'icona quanto basta */
+    
+    /* 3. Allineamento */
+    display: flex;              /* Per allineare l'icona al centro del pulsante */
+    align-items: center;        /* Centra verticalmente l'icona rispetto al box */
+    justify-content: center;    /* Centra orizzontalmente l'icona rispetto al box */
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;                  /* Allinea i figli (.profile-image e .profile-details) in riga */
+    align-items: flex-end;          /* Spinge tutto verso il basso della sezione */
+    padding: 30px;                  /* Spazio dai bordi */
+    height: 300px;                  /* Altezza della sezione */
+    background: linear-gradient(180deg, #333 0%, #000 100%); /* Sfumatura da grigio a nero */
+    color: white;                   /* Colore del testo*/
+}
+
+.profile-image {
+    position: relative;             /* Serve per posizionare la label sopra l'icona */
+    margin-right: 20px;             /* Distanza dal testo MODIFY a destra */
+}
+
+.profile-image i {
+    font-size: 80px;                /* Grandezza dell'icona FontAwesome */
+    color: white;
+    display: block;                 /* Rende l'icona un blocco per posizionare la label sotto di essa */   
+}                                   /* !!! Qui in realtà vorrei eliminare la label "Click to change Image" e permettere di cliccare direttamente sull'icona */
+
+.upload-label {
+    display: block;
+    font-size: 10px;
+    color: #888;
+    cursor: pointer;                /* Cambia il cursore per indicare che è cliccabile */
+    margin-top: 5px;
+    text-align: center;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;         /* Mette in colonna l'username e il bottone */
+    gap: 10px;                      /* Spazio tra username e bottone */
+    padding-bottom: 10px;           /* Allineamento con la base dell'icona */
+}
+
+#username {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;                      /* Rimuove margini extra del tag h1 */
+}
+
+.edit-profile {
+    background-color: transparent;       /* Sfondo vuoto: in modo da riottenere il nero dell'Hero in background */
+    color: white;                   /* Testo bianco */
+    border: 1px solid white;        /* Bordo sottile */
+    border-radius: 20px;            /* Arrotonda i lati */
+    padding: 5px 15px;              /* Spazio interno (sopra-sotto, destra-sinistra) */
+    font-size: 12px;                
+    font-weight: bold;              /* Grassetto */
+    cursor: pointer;
+    width: fit-content;             /* Il bottone si adatta alla lunghezza del testo MODIFY PROFILE */
+    transition: 0.3s;               /* Rende l'hover più morbido */
+}
+
+.edit-profile:hover {
+    background-color: white;        /* Inverte i colori al passaggio del mouse */
+    color: black;                   
+}
+
 ul {
     list-style-type: none;
 }
