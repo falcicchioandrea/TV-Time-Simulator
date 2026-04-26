@@ -2,7 +2,7 @@
     /* Color Variables */
     --primary-color: #102a67;
     --secondary-color: #501f87;
-    --color-bg: #770808;
+    --color-bg: #000000;
 }
 
 * {
@@ -11,10 +11,10 @@
     box-sizing: border-box;   /* Include padding e border nella dimensione totale degli elementi */
 }
 
-/* Stile per la barra in alto */
+/* Header Section */
 header {
     display: flex;              /* Attiva Flexbox: trasforma il contenitore in una riga */
-    justify-content: space-between; /* Spinge il primo elemento a sinistra e l'ultimo a destra */
+    justify-content: space-between;      /* Spinge il primo elemento a sinistra e l'ultimo a destra */
     align-items: center;        /* Centra verticalmente le icone se hanno altezze diverse */
     padding: 15px 20px;         /* Crea respiro dai bordi (sopra-sotto, destra-sinistra) */
     position: absolute;         /* Lo "stacchiamo" dal flusso per sovrapporlo allo sfondo */
@@ -22,9 +22,8 @@ header {
     z-index: 10;                /* Lo tiene "sopra" a tutto il resto */
 }
 
-/* Stile specifico per l'icona gialla */
 .bell-icon {
-    color: #ffeb3b;             /* Colore giallo della campana */
+    color: #ffeb3b;           /* Colore giallo della campana */
     font-size: 1.3rem;          /* Dimensione dell'icona */
 }
 
