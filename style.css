@@ -106,6 +106,118 @@ header {
     color: black;                   
 }
 
+/* Main Section */
+.social-statistics {
+    display: flex;              /* Trasforma la sezione in una riga orizzontale */
+    width: 100%;                /* Occupa tutta la larghezza disponibile */
+    background-color: #000;     /* Sfondo nero profondo */
+    border-top: 1px solid #333;    /* Linea grigia sottile sopra */
+    border-bottom: 1px solid #333; /* Linea grigia sottile sotto */
+    color : white;                   /* Testo bianco */
+}
+
+.stat-item {
+    flex: 1;                    /* Forza le 3 scatole a dividersi lo spazio in parti uguali (1/3 ciascuna) */
+    display: flex;              /* Usiamo flex anche qui per allineare il contenuto interno */
+    flex-direction: column;     /* Mette in colonna il numero e la scritta */
+    align-items: center;        /* Centra tutto orizzontalmente */
+    padding: 15px 0;            /* Spazio interno sopra e sotto per dare "respiro" */
+    border-right: 1px solid #333; /* Crea la linea verticale divisoria sulla destra di ogni scatola */
+}
+
+.count {
+    color: #ffffff;             /* Bianco puro */
+    font-size: 1.2rem;          /* Un po' più grande del testo normale */
+    font-weight: bold;          /* Grassetto per farlo risaltare */
+    margin-bottom: 5px;          /* Spazio tra il numero e la scritta */
+}
+
+body {
+    background-color: #000000; /* Nero assoluto */
+    margin: 0;                 /* Rimuove i bordi bianchi predefiniti del browser */
+    padding: 0;
+    color: #ffffff;            /* Testo bianco di base per tutta la pagina */
+    font-family: sans-serif;   /* Un font pulito */
+}
+
+/* Sezione Statistiche */
+.statistics-header {
+    display: flex;                  /* Flexbox per allineare titolo e freccia sulla stessa riga */
+    justify-content: space-between; /* Spinge titolo e freccia ai lati */
+    align-items: center;        
+    padding: 20px 10px;
+    color: white;                  /* Colore del testo del titolo e della freccia */
+}
+
+.statistics-header h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.arrow-icon {
+    color: #888;    /* Grigio per la freccetta */
+    font-size: 1.3rem;
+}
+
+.statistics-grid {
+    display: flex;  
+    flex-wrap: nowrap;          /* Impedisce alle card di andare a capo, creando una riga orizzontale */    
+    overflow-x: auto;      /* Crea 4 colonne uguali */
+    gap: 12px;
+    padding: 10px 20px;               /* Spazio tra le card */
+    gap: 15px;
+}
+
+.statistics-grid::-webkit-scrollbar {
+    display: none;               /* Per Chrome, Safari e Opera */
+}
+
+.statistic-card {
+    background-color: #000;
+    border: 1px solid #333;   /* Bordo grigio scuro */
+    border-radius: 6px;
+    padding: 0;
+    scroll-snap-align: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 75%; /* Ogni card occupa l'75% della larghezza del container, lasciando spazio per lo scroll */
+    padding-top: 15px;
+    font-size: 0.9rem;
+}
+
+.statistic-card > div, .statistic-card .count-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #333;
+    margin-top: 10px;
+    padding: 15px 5px;
+    width: 100%;
+}
+
+.count {
+    display: block;           /* Mette il numero sopra la scritta */
+    font-size: 1.3rem;
+    font-weight: bold;
+    
+}
+
+.statistic-card span:not(.count) { /* Le scritte MONTHS, DAYS... */
+    font-size: 0.6rem;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.statistic-card small {
+    font-size: 0.6rem;
+    color: #aaa;
+    display: block;
+}
+
+/* DA SISTEMARE ALCUNE COSE DELLA SEZIONE STATISTICS !!!!!! */
+
 ul {
     list-style-type: none;
 }
