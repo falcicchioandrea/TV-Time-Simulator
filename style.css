@@ -17,9 +17,10 @@ header {
     justify-content: space-between;      /* Spinge il primo elemento a sinistra e l'ultimo a destra */
     align-items: center;        /* Centra verticalmente le icone se hanno altezze diverse */
     padding: 15px 20px;         /* Crea respiro dai bordi (sopra-sotto, destra-sinistra) */
-    position: absolute;         /* Lo "stacchiamo" dal flusso per sovrapporlo allo sfondo */
+    position: fixed;         /* Lo "stacchiamo" dal flusso per sovrapporlo allo sfondo */
     width: 100%;                /* Essendo absolute, dobbiamo dirgli di occupare tutta la larghezza */
-    z-index: 10;                /* Lo tiene "sopra" a tutto il resto */
+    z-index: 10; 
+    background: #000;               /* Lo tiene "sopra" a tutto il resto */
 }
 
 .bell-icon {
