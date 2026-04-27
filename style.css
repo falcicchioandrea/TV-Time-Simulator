@@ -162,9 +162,8 @@ body {
     display: flex;  
     flex-wrap: nowrap;          /* Impedisce alle card di andare a capo, creando una riga orizzontale */    
     overflow-x: auto;      /* Crea 4 colonne uguali */
-    gap: 12px;
-    padding: 10px 20px;               /* Spazio tra le card */
-    gap: 15px;
+    gap: 10px;
+    padding: 10px;               /* Spazio tra le card */
 }
 
 .statistics-grid::-webkit-scrollbar {
@@ -181,12 +180,13 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    flex: 0 0 75%; /* Ogni card occupa l'75% della larghezza del container, lasciando spazio per lo scroll */
+    flex: 0 0 25%; /* Ogni card occupa l'75% della larghezza del container, lasciando spazio per lo scroll */
     padding-top: 15px;
     font-size: 0.9rem;
 }
 
 .statistic-card > div, .statistic-card .count-container {
+    border-top: 1px solid #333;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -216,6 +216,97 @@ body {
 }
 
 /* DA SISTEMARE ALCUNE COSE DELLA SEZIONE STATISTICS !!!!!! */
+
+/* SEZIONI FILM E SERIE TV */
+/* Applichiamo lo stesso stile a tutti gli header delle sezioni */
+[class*="__header"], .statistics-header {
+    display: flex;              
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px 10px; /* Più spazio sopra, meno sotto verso il box */
+    color: white;
+}
+
+[class*="__header"] h2 i {
+    color: #ff4d4d; /* Colore rosso per il cuore dei preferiti */
+    margin-right: 8px;
+}
+
+.add-box {
+    width: 95%;                 /* Quasi tutta la larghezza */
+    margin: 0 auto 20px;        /* Centrato con spazio sotto */
+    height: 150px;              /* Altezza per essere cliccabile */
+    background-color: #111;     /* Grigio leggermente diverso dallo sfondo */
+    border: 1px solid #333;     /* Bordo sottile */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;     /* Icona sopra, testo sotto */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+.add-box:hover {
+    background-color: #1a1a1a;       /* Si schiarisce al passaggio */
+}
+
+.add-box i {
+    font-size: 2rem;            /* Icona del "+" grande */
+    color: #888;
+}
+
+.add-box span {
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Footer Section */
+
+.footer {
+    position: fixed;            /* Rimane fisso sullo schermo */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000;     /* Sfondo nero pieno */
+    border-top: 1px solid #222; /* Linea di separazione sottile */
+    padding: 10px 0 20px;       /* Più padding sotto */
+    z-index: 100;               /* Sempre sopra agli altri elementi */
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around; /* Distribuisce le 4 icone in modo equo */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #888;                /* Colore icone non attive */
+    display: flex;
+    flex-direction: column;     /* Icona sopra, testo sotto */
+    align-items: center;
+    font-size: 0.7rem;
+    gap: 5px;
+}
+
+/* Quando l'utente è sulla pagina Profilo (index.html) */
+.nav-list li a[aria-label="Profile"] {
+    color: white;               /* L'icona attiva diventa bianca */
+}
+
+.nav-list i {
+    font-size: 1.2rem;          /* Dimensione icone footer */
+}
+
+main {
+    padding-bottom: 100px; /* Crea uno spazio per non far coprire i box dal footer */
+}
+
 
 ul {
     list-style-type: none;
