@@ -309,12 +309,12 @@ ul {
     width: 300px;
     height: 100vh;
     /* Occupa tutta l'altezza dello schermo */
-    background-color: #ffffff;
+    background-color: #000000;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
     transition: right 0.3s ease;
     z-index: 1000;
     /* Assicura che il menu sia sopra tutto */
-    padding: 20px;
+    padding: 30px;
 }
 
 .side-menu.active {
@@ -337,4 +337,25 @@ ul {
 .menu-overlay.active {
     display: block;
     /* Quando ha la classe 'active', si mostra */
+}
+
+.menu-header {
+    display: flex;
+    /* Permette allineamento flessibile */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#close-menu-btn {
+    background: none;
+    /* Sfondo trasparente */
+    border: none;
+    /* Nessun bordo */
+    color: white;
+    /* Testo bianco */
+    font-size: 1.5rem;
+    /* Dimensione del testo (più grande) */
+    cursor: pointer;
+    /* Cambia il cursore in un 'puntatore' per indicare che è cliccabile */
 }
