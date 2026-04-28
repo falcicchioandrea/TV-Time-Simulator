@@ -8,145 +8,213 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;   /* Include padding e border nella dimensione totale degli elementi */
+    box-sizing: border-box;
+    /* Include padding e border nella dimensione totale degli elementi */
 }
 
 /* Header Section */
 header {
-    display: flex;              /* Attiva Flexbox: trasforma il contenitore in una riga */
-    justify-content: space-between;      /* Spinge il primo elemento a sinistra e l'ultimo a destra */
-    align-items: center;        /* Centra verticalmente le icone se hanno altezze diverse */
-    padding: 15px 20px;         /* Crea respiro dai bordi (sopra-sotto, destra-sinistra) */
-    position: fixed;         /* Lo "stacchiamo" dal flusso per sovrapporlo allo sfondo */
-    width: 100%;                /* Essendo absolute, dobbiamo dirgli di occupare tutta la larghezza */
-    z-index: 10; 
-    background: #000;               /* Lo tiene "sopra" a tutto il resto */
+    display: flex;
+    /* Attiva Flexbox: trasforma il contenitore in una riga */
+    justify-content: space-between;
+    /* Spinge il primo elemento a sinistra e l'ultimo a destra */
+    align-items: center;
+    /* Centra verticalmente le icone se hanno altezze diverse */
+    padding: 15px 20px;
+    /* Crea respiro dai bordi (sopra-sotto, destra-sinistra) */
+    position: fixed;
+    /* Lo "stacchiamo" dal flusso per sovrapporlo allo sfondo */
+    width: 100%;
+    /* Essendo absolute, dobbiamo dirgli di occupare tutta la larghezza */
+    z-index: 10;
+    background: #000;
+    /* Lo tiene "sopra" a tutto il resto */
 }
 
 .bell-icon {
-    color: #ffeb3b;           /* Colore giallo della campana */
-    font-size: 1.3rem;          /* Dimensione dell'icona */
+    color: #ffeb3b;
+    /* Colore giallo della campana */
+    font-size: 1.3rem;
+    /* Dimensione dell'icona */
 }
 
 .menu-btn {
     /* 1. Rimuoviamo gli stili di default del pulsante */
-    background: none;           /* Toglie lo sfondo grigio */
-    border: none;               /* Toglie il bordo nero/grigio */
-    padding: 0;                 /* Rimuove spazi interni extra */
-    cursor: pointer;            /* Fa apparire la "manina" al passaggio del mouse */
-    
+    background: none;
+    /* Toglie lo sfondo grigio */
+    border: none;
+    /* Toglie il bordo nero/grigio */
+    padding: 0;
+    /* Rimuove spazi interni extra */
+    cursor: pointer;
+    /* Fa apparire la "manina" al passaggio del mouse */
+
     /* 2. Coloriamo e dimensioniamo l'icona all'interno */
-    color: white;               /* Rende le lineette/puntini bianchi */
-    font-size: 1.3rem;          /* Ingrandisce l'icona quanto basta */
-    
+    color: white;
+    /* Rende le lineette/puntini bianchi */
+    font-size: 1.3rem;
+    /* Ingrandisce l'icona quanto basta */
+
     /* 3. Allineamento */
-    display: flex;              /* Per allineare l'icona al centro del pulsante */
-    align-items: center;        /* Centra verticalmente l'icona rispetto al box */
-    justify-content: center;    /* Centra orizzontalmente l'icona rispetto al box */
+    display: flex;
+    /* Per allineare l'icona al centro del pulsante */
+    align-items: center;
+    /* Centra verticalmente l'icona rispetto al box */
+    justify-content: center;
+    /* Centra orizzontalmente l'icona rispetto al box */
 }
 
 /* Hero Section */
 .hero-section {
-    display: flex;                  /* Allinea i figli (.profile-image e .profile-details) in riga */
-    align-items: flex-end;          /* Spinge tutto verso il basso della sezione */
-    padding: 30px;                  /* Spazio dai bordi */
-    height: 300px;                  /* Altezza della sezione */
-    background: linear-gradient(180deg, #333 0%, #000 100%); /* Sfumatura da grigio a nero */
-    color: white;                   /* Colore del testo*/
+    display: flex;
+    /* Allinea i figli (.profile-image e .profile-details) in riga */
+    align-items: flex-end;
+    /* Spinge tutto verso il basso della sezione */
+    padding: 30px;
+    /* Spazio dai bordi */
+    height: 300px;
+    /* Altezza della sezione */
+    background: linear-gradient(180deg, #333 0%, #000 100%);
+    /* Sfumatura da grigio a nero */
+    color: white;
+    /* Colore del testo*/
 }
 
 .profile-image {
-    position: relative;             /* Serve per posizionare la label sopra l'icona */
-    margin-right: 20px;             /* Distanza dal testo MODIFY a destra */
+    position: relative;
+    /* Serve per posizionare la label sopra l'icona */
+    margin-right: 20px;
+    /* Distanza dal testo MODIFY a destra */
 }
 
 .profile-image i {
-    font-size: 80px;                /* Grandezza dell'icona FontAwesome */
+    font-size: 80px;
+    /* Grandezza dell'icona FontAwesome */
     color: white;
-    display: block;                 /* Rende l'icona un blocco per posizionare la label sotto di essa */   
-}                                   /* !!! Qui in realtà vorrei eliminare la label "Click to change Image" e permettere di cliccare direttamente sull'icona */
+    display: block;
+    /* Rende l'icona un blocco per posizionare la label sotto di essa */
+}
+
+/* !!! Qui in realtà vorrei eliminare la label "Click to change Image" e permettere di cliccare direttamente sull'icona */
 
 .upload-label {
     display: block;
     font-size: 10px;
     color: #888;
-    cursor: pointer;                /* Cambia il cursore per indicare che è cliccabile */
+    cursor: pointer;
+    /* Cambia il cursore per indicare che è cliccabile */
     margin-top: 5px;
     text-align: center;
 }
 
 .profile-details {
     display: flex;
-    flex-direction: column;         /* Mette in colonna l'username e il bottone */
-    gap: 10px;                      /* Spazio tra username e bottone */
-    padding-bottom: 10px;           /* Allineamento con la base dell'icona */
+    flex-direction: column;
+    /* Mette in colonna l'username e il bottone */
+    gap: 10px;
+    /* Spazio tra username e bottone */
+    padding-bottom: 10px;
+    /* Allineamento con la base dell'icona */
 }
 
 #username {
     font-size: 24px;
     font-weight: bold;
-    margin: 0;                      /* Rimuove margini extra del tag h1 */
+    margin: 0;
+    /* Rimuove margini extra del tag h1 */
 }
 
 .edit-profile {
-    background-color: transparent;       /* Sfondo vuoto: in modo da riottenere il nero dell'Hero in background */
-    color: white;                   /* Testo bianco */
-    border: 1px solid white;        /* Bordo sottile */
-    border-radius: 20px;            /* Arrotonda i lati */
-    padding: 5px 15px;              /* Spazio interno (sopra-sotto, destra-sinistra) */
-    font-size: 12px;                
-    font-weight: bold;              /* Grassetto */
+    background-color: transparent;
+    /* Sfondo vuoto: in modo da riottenere il nero dell'Hero in background */
+    color: white;
+    /* Testo bianco */
+    border: 1px solid white;
+    /* Bordo sottile */
+    border-radius: 20px;
+    /* Arrotonda i lati */
+    padding: 5px 15px;
+    /* Spazio interno (sopra-sotto, destra-sinistra) */
+    font-size: 12px;
+    font-weight: bold;
+    /* Grassetto */
     cursor: pointer;
-    width: fit-content;             /* Il bottone si adatta alla lunghezza del testo MODIFY PROFILE */
-    transition: 0.3s;               /* Rende l'hover più morbido */
+    width: fit-content;
+    /* Il bottone si adatta alla lunghezza del testo MODIFY PROFILE */
+    transition: 0.3s;
+    /* Rende l'hover più morbido */
 }
 
 .edit-profile:hover {
-    background-color: white;        /* Inverte i colori al passaggio del mouse */
-    color: black;                   
+    background-color: white;
+    /* Inverte i colori al passaggio del mouse */
+    color: black;
 }
 
 /* Main Section */
 .social-statistics {
-    display: flex;              /* Trasforma la sezione in una riga orizzontale */
-    width: 100%;                /* Occupa tutta la larghezza disponibile */
-    background-color: #000;     /* Sfondo nero profondo */
-    border-top: 1px solid #333;    /* Linea grigia sottile sopra */
-    border-bottom: 1px solid #333; /* Linea grigia sottile sotto */
-    color : white;                   /* Testo bianco */
+    display: flex;
+    /* Trasforma la sezione in una riga orizzontale */
+    width: 100%;
+    /* Occupa tutta la larghezza disponibile */
+    background-color: #000;
+    /* Sfondo nero profondo */
+    border-top: 1px solid #333;
+    /* Linea grigia sottile sopra */
+    border-bottom: 1px solid #333;
+    /* Linea grigia sottile sotto */
+    color: white;
+    /* Testo bianco */
 }
 
 .stat-item {
-    flex: 1;                    /* Forza le 3 scatole a dividersi lo spazio in parti uguali (1/3 ciascuna) */
-    display: flex;              /* Usiamo flex anche qui per allineare il contenuto interno */
-    flex-direction: column;     /* Mette in colonna il numero e la scritta */
-    align-items: center;        /* Centra tutto orizzontalmente */
-    padding: 15px 0;            /* Spazio interno sopra e sotto per dare "respiro" */
-    border-right: 1px solid #333; /* Crea la linea verticale divisoria sulla destra di ogni scatola */
+    flex: 1;
+    /* Forza le 3 scatole a dividersi lo spazio in parti uguali (1/3 ciascuna) */
+    display: flex;
+    /* Usiamo flex anche qui per allineare il contenuto interno */
+    flex-direction: column;
+    /* Mette in colonna il numero e la scritta */
+    align-items: center;
+    /* Centra tutto orizzontalmente */
+    padding: 15px 0;
+    /* Spazio interno sopra e sotto per dare "respiro" */
+    border-right: 1px solid #333;
+    /* Crea la linea verticale divisoria sulla destra di ogni scatola */
 }
 
 .count {
-    color: #ffffff;             /* Bianco puro */
-    font-size: 1.2rem;          /* Un po' più grande del testo normale */
-    font-weight: bold;          /* Grassetto per farlo risaltare */
-    margin-bottom: 5px;          /* Spazio tra il numero e la scritta */
+    color: #ffffff;
+    /* Bianco puro */
+    font-size: 1.2rem;
+    /* Un po' più grande del testo normale */
+    font-weight: bold;
+    /* Grassetto per farlo risaltare */
+    margin-bottom: 5px;
+    /* Spazio tra il numero e la scritta */
 }
 
 body {
-    background-color: #000000; /* Nero assoluto */
-    margin: 0;                 /* Rimuove i bordi bianchi predefiniti del browser */
+    background-color: #000000;
+    /* Nero assoluto */
+    margin: 0;
+    /* Rimuove i bordi bianchi predefiniti del browser */
     padding: 0;
-    color: #ffffff;            /* Testo bianco di base per tutta la pagina */
-    font-family: sans-serif;   /* Un font pulito */
+    color: #ffffff;
+    /* Testo bianco di base per tutta la pagina */
+    font-family: sans-serif;
+    /* Un font pulito */
 }
 
 /* Sezione Statistiche */
 .statistics-header {
-    display: flex;                  /* Flexbox per allineare titolo e freccia sulla stessa riga */
-    justify-content: space-between; /* Spinge titolo e freccia ai lati */
-    align-items: center;        
+    display: flex;
+    /* Flexbox per allineare titolo e freccia sulla stessa riga */
+    justify-content: space-between;
+    /* Spinge titolo e freccia ai lati */
+    align-items: center;
     padding: 20px 10px;
-    color: white;                  /* Colore del testo del titolo e della freccia */
+    color: white;
+    /* Colore del testo del titolo e della freccia */
 }
 
 .statistics-header h2 {
@@ -155,26 +223,32 @@ body {
 }
 
 .arrow-icon {
-    color: #888;    /* Grigio per la freccetta */
+    color: #888;
+    /* Grigio per la freccetta */
     font-size: 1.3rem;
 }
 
 .statistics-grid {
-    display: flex;  
-    flex-wrap: nowrap;          /* Impedisce alle card di andare a capo, creando una riga orizzontale */    
-    overflow-x: auto;      /* Crea 4 colonne uguali */
+    display: flex;
+    flex-wrap: nowrap;
+    /* Impedisce alle card di andare a capo, creando una riga orizzontale */
+    overflow-x: auto;
+    /* Crea 4 colonne uguali */
     gap: 12px;
-    padding: 10px 20px;               /* Spazio tra le card */
+    padding: 10px 20px;
+    /* Spazio tra le card */
     gap: 15px;
 }
 
 .statistics-grid::-webkit-scrollbar {
-    display: none;               /* Per Chrome, Safari e Opera */
+    display: none;
+    /* Per Chrome, Safari e Opera */
 }
 
 .statistic-card {
     background-color: #000;
-    border: 1px solid #333;   /* Bordo grigio scuro */
+    border: 1px solid #333;
+    /* Bordo grigio scuro */
     border-radius: 6px;
     padding: 0;
     scroll-snap-align: center;
@@ -182,12 +256,14 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    flex: 0 0 75%; /* Ogni card occupa l'75% della larghezza del container, lasciando spazio per lo scroll */
+    flex: 0 0 75%;
+    /* Ogni card occupa l'75% della larghezza del container, lasciando spazio per lo scroll */
     padding-top: 15px;
     font-size: 0.9rem;
 }
 
-.statistic-card > div, .statistic-card .count-container {
+.statistic-card>div,
+.statistic-card .count-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -198,13 +274,15 @@ body {
 }
 
 .count {
-    display: block;           /* Mette il numero sopra la scritta */
+    display: block;
+    /* Mette il numero sopra la scritta */
     font-size: 1.3rem;
     font-weight: bold;
-    
+
 }
 
-.statistic-card span:not(.count) { /* Le scritte MONTHS, DAYS... */
+.statistic-card span:not(.count) {
+    /* Le scritte MONTHS, DAYS... */
     font-size: 0.6rem;
     color: #888;
     text-transform: uppercase;
@@ -220,4 +298,43 @@ body {
 
 ul {
     list-style-type: none;
+}
+
+.side-menu {
+    position: fixed;
+    /* Posiziona il menu lateralmente */
+    top: 0;
+    right: -300px;
+    /* Nasconde il menù fuori dallo schermo a destra */
+    width: 300px;
+    height: 100vh;
+    /* Occupa tutta l'altezza dello schermo */
+    background-color: #ffffff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    /* Assicura che il menu sia sopra tutto */
+    padding: 20px;
+}
+
+.side-menu.active {
+    right: 0;
+    /* Quando ha la classe 'active', scorre a destra */
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* Nascosto di default */
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    display: block;
+    /* Quando ha la classe 'active', si mostra */
 }

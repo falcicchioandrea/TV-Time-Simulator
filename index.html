@@ -17,6 +17,22 @@
             <a href="#" class="bell-icon"><i class="fas fa-bell"></i></a> <!-- Dobbiamo aggiungere un file notifiche.html a cui reinderizzare l'utente quando clicca sulla campanella-->
             <button class="menu-btn" aria-label="Open settings menu"><i class="fa-solid fa-bars"></i></button> <!-- Dobbiamo aggiungere un menu a comparsa quando l'utente clicca sull'icona del menu -->
          </header>
+        
+        <nav class="side-menu" id="side-menu" aria-label="Settings Menu">
+            <div class="menu-header">
+                <h3>Impostazioni</h3>
+                <button id="close-menu-btn" aria-label="Chiudi Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <ul>
+                <li><a href="#"><i class="fas fa-cog"></i> Preferenze </a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> Supporto </a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout </a></li>
+            </ul>
+        </nav>
+
+        <div class="menu-overlay" id="menu-overlay"></div>
 
         <!-- Hero Section -->
          <section class="hero-section" aria-label="User Profile Hero Section">
