@@ -654,3 +654,111 @@ ul {
     color: #ffffff;
     /* Come il testo, anche l'icona si 'accende' diventando bianca quando selezionata */
 }
+
+/*---SECTION EXPLORE---*/
+
+.explore-header {
+    border-bottom: 1px solid white; /* Linea di separazione inferiore */
+    height: 80px;                   /* Altezza fissa dell'header */
+}
+
+/* Stile ricerca avanzata */
+.search-form {
+    padding: 100px 10px 20px; /* Spazio interno (100px in alto per evitare l'header fisso) */
+    display: flex; /* Allinea gli elementi sulla stessa riga */
+    align-items: center; /* Centra verticalmente input e bottone */
+    gap: 5px; /* Distanza tra input e bottone annulla */
+}
+
+.search-form input {
+    flex: 1; /* Occupa tutto lo spazio orizzontale disponibile */
+    background-color: #1a1a1a; /* Sfondo grigio scuro */
+    border: 1px solid #333; /* Bordo grigio */
+    border-radius: 8px; /* Angoli arrotondati */
+    padding: 12px 10px; /* Spazio interno della casella */
+    color: white; /* Testo bianco */
+    font-size: 1rem; /* Dimensione del testo */
+    outline: none; /* Rimuove il contorno blu di selezione predefinito */
+}
+
+.search-form input::placeholder {
+    color: #888; /* Colore del testo segnaposto */
+}
+
+/* Stile per il tasto Annulla */
+.cancel-btn {
+    background: none; /* Nessuno sfondo */
+    border: none; /* Nessun bordo */
+    color: #888; /* Testo grigio */
+    font-size: 1rem; /* Dimensione del testo */
+    cursor: pointer; /* Mostra la manina al passaggio del mouse */
+    transition: color 0.3s ease, opacity 0.3s ease; /* Animazione fluida al passaggio del mouse */
+}
+
+.cancel-btn:hover {
+    opacity: 0.7; /* Leggera trasparenza all'hover per dare feedback */
+}
+
+/* Risultati della ricerca */
+.result-film {
+    display: flex; /* Dispone gli elementi sulla stessa riga */
+    align-items: center; /* Centra verticalmente gli elementi */
+    padding: 15px; /* Spazio interno del risultato */
+    border-bottom: 1px solid #333; /* Linea divisoria tra i risultati */
+    gap: 15px; /* Distanza tra locandina, testo e bottone "+" */
+}
+
+.img-film-container {
+    flex-shrink: 0; /* Impedisce alla locandina di restringersi se il titolo è lungo */
+}
+
+.result-poster {
+    width: 80px; /* Larghezza fissa locandina */
+    height: 120px; /* Altezza fissa locandina */
+    object-fit: cover; /* Taglia l'immagine mantenendo le proporzioni intatte */
+    border-radius: 6px; /* Angoli smussati */
+}
+
+.result-details {
+    flex: 1; /* Occupa tutto lo spazio centrale disponibile */
+    display: flex; /* Applica flexbox ai testi */
+    flex-direction: column; /* Mette titolo e statistiche in colonna */
+    gap: 5px; /* Distanza tra titolo e statistiche */
+}
+
+.result-title {
+    font-size: 1.2rem; /* Dimensione del titolo */
+    margin: 0; /* Rimuove i margini di default */
+}
+
+.result-stats {
+    color: #888; /* Testo grigio */
+    font-size: 1rem; /* Dimensione testo statistiche */
+    display: flex; /* Allinea icona e testo in riga */
+    margin: 0; /* Rimuove margini di default */
+    gap: 6px; /* Distanza tra icona e testo */
+}
+
+/* Bottone Aggiungi (+) */
+.add-to-list-btn {
+    background: none; /* Sfondo trasparente */
+    border: 1.5px solid #ffeb3b; /* Bordo giallo */
+    color: #ffeb3b; /* Icona gialla */
+    width: 30px; /* Larghezza bottone */
+    height: 30px; /* Altezza bottone */
+    border-radius: 8px; /* Angoli arrotondati */
+    display: flex; /* Per centrare l'icona interna */
+    justify-content: center; /* Centra orizzontalmente l'icona */
+    align-items: center; /* Centra verticalmente l'icona */
+    cursor: pointer; /* Cursore cliccabile */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease; /* Transizioni fluide per hover e click */
+}
+
+.add-to-list-btn:hover {
+    background-color: #ffeb3b; /* Sfondo diventa giallo all'hover */
+    color: black; /* Icona diventa nera all'hover per contrasto */
+}
+
+.add-to-list-btn:active {
+    transform: scale(0.9); /* Rimpicciolisce il bottone al click per feedback visivo */
+}

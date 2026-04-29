@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Logica del form di login se siamo su login.html
     const loginForm = document.getElementById("login-form");
-    if (loginForm) {
+    if (loginForm) {     //controlla se il modulo di login esiste (quindi siamo su login.html)
         loginForm.addEventListener("submit", (e) => {
             e.preventDefault(); // Evita il ricaricamento della pagina quando viene inviato il form
             // Prendiamo l'username inserito nel campo username
