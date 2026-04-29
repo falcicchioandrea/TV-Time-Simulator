@@ -35,7 +35,7 @@
         <div class="menu-overlay" id="menu-overlay"></div>
 
         <!-- Main Content -->
-         <main class="main-content" aria-label="Main Content Area">
+        <main class="main-content" aria-label="Main Content Area">
             <section class="search-section" aria-label="Search Section">
                 <div class="search__header">
                     <h2>Search</h2>
@@ -44,7 +44,25 @@
                 <form class="search-form" role="search" aria-label="Search Form">
                     <input type="text" placeholder="Search for series or films..." aria-label="Search input">
                     <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+                    <button type="button" class="cancel-btn"><i class="fas fa-times"></i></button>
                 </form>
+            </section>
+
+            <section class="results-list" aria-label="Risultati della ricerca">
+            <div class="result-film">
+                <div class="img-film-container">
+                    <img src="assets/TheBoys.png" alt="The Boys" class="result-poster">
+                </div>
+                <div class="result-details">
+                    <h3 class="result-title">The Boys</h3>
+                    <p class="result-stats">
+                        <i class="fas fa-tv"></i> 2,33 Mln hanno aggiunto questa serie
+                    </p>
+                </div>
+                <button class="add-to-list-btn" aria-label="Aggiungi The Boys alla tua lista">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
             </section>
         </main>
 
