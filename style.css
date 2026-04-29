@@ -294,6 +294,7 @@ body {
 }
 
 /* DA SISTEMARE ALCUNE COSE DELLA SEZIONE STATISTICS !!!!!! */
+/* Cioè visto che è stato fatto con LLM, rivedere e rimuovere parti superflue */
 
 /* SEZIONI FILM E SERIE TV */
 /* Applichiamo lo stesso stile a tutti gli header delle sezioni */
@@ -590,4 +591,66 @@ ul {
 .login-btn:hover {
     background-color: white;            /* Sfondo del bottone al passaggio del mouse */
     color: black;                       /* Colore del testo al passaggio del mouse */
+
+  /* --- SEZIONE MENU HAMBURGER --- */
+/* Stile per la lista (ul) delle voci del menù laterale */
+.side-menu ul {
+    margin-top: 20px;
+    /* Crea uno spazio vuoto sopra la lista per separarla dall'intestazione (header) del menù */
+}
+
+/* Stile per i singoli elementi della lista (li) */
+.side-menu li {
+    margin-bottom: 10px;
+    /* Crea uno spazio vuoto sotto ogni voce per non farle sembrare troppo attaccate tra loro */
+}
+
+/* Stile per i link (a) cliccabili all'interno del menù */
+.side-menu a {
+    color: #e0e0e0;
+    /* Imposta un testo grigio chiaro che fa contrasto con lo sfondo nero senza affaticare la vista */
+    text-decoration: none;
+    /* Rimuove la fastidiosa sottolineatura predefinita dei link */
+    font-size: 1.1rem;
+    /* Aumenta leggermente la grandezza del testo per renderlo più leggibile */
+    display: flex;
+    /* Trasforma il link in un contenitore flessibile, essenziale per allineare icona e testo */
+    align-items: center;
+    /* Centra verticalmente l'icona rispetto al testo sulla stessa riga */
+    gap: 15px;
+    /* Imposta una distanza fissa (spazio vuoto) di 15px tra l'icona e il testo */
+    padding: 12px 15px;
+    /* Aggiunge spazio interno ingrandendo l'area cliccabile */
+    border-radius: 8px;
+    /* Arrotonda leggermente gli angoli del riquadro, visibile soprattutto all'hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Rende fluidi e morbidi (in 0.3 secondi) i cambiamenti di colore quando si fa hover */
+}
+
+/* Stato 'hover': cosa succede quando il mouse passa sopra il link */
+.side-menu a:hover {
+    background-color: #1a1a1a;
+    /* Mostra un riquadro di sfondo grigio scuro per evidenziare la selezione */
+    color: #ffffff;
+    /* Il testo, da grigio chiaro, diventa bianco puro brillante */
+}
+
+/* Stile per le icone (tag 'i' di FontAwesome) dentro i link */
+.side-menu a i {
+    font-size: 1.3rem;
+    /* Rende le icone leggermente più grandi del testo per dargli maggiore importanza */
+    width: 25px;
+    /* Impone una larghezza fissa. Evita che icone più larghe spostino il testo, mantenendo le scritte incolonnate */
+    text-align: center;
+    /* Centra le icone orizzontalmente nel loro blocco di 25px */
+    color: #888;
+    /* Imposta le icone a un grigio più scuro rispetto al testo di default */
+    transition: color 0.3s ease;
+    /* L'animazione fluida del colore si applica anche all'icona */
+}
+
+/* Cosa succede all'icona quando il mouse passa sopra il link intero */
+.side-menu a:hover i {
+    color: #ffffff;
+    /* Come il testo, anche l'icona si 'accende' diventando bianca quando selezionata */
 }
