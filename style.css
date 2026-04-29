@@ -261,7 +261,7 @@ body {
     font-size: 0.9rem;
 }
 
-.statistic-card > div,
+.statistic-card>div,
 .statistic-card .count-container {
     display: flex;
     justify-content: space-around;
@@ -298,28 +298,37 @@ body {
 
 /* SEZIONI FILM E SERIE TV */
 /* Applichiamo lo stesso stile a tutti gli header delle sezioni */
-[class*="__header"], .statistics-header {
-    display: flex;              
+[class*="__header"],
+.statistics-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15px 10px; /* Più spazio sopra, meno sotto verso il box */
+    padding: 20px 15px 10px;
+    /* Più spazio sopra, meno sotto verso il box */
     color: white;
 }
 
 [class*="__header"] h2 i {
-    color: #ff4d4d; /* Colore rosso per il cuore dei preferiti */
+    color: #ff4d4d;
+    /* Colore rosso per il cuore dei preferiti */
     margin-right: 8px;
 }
 
 .add-box {
-    width: 95%;                 /* Quasi tutta la larghezza */
-    margin: 0 auto 20px;        /* Centrato con spazio sotto */
-    height: 150px;              /* Altezza per essere cliccabile */
-    background-color: #111;     /* Grigio leggermente diverso dallo sfondo */
-    border: 1px solid #333;     /* Bordo sottile */
+    width: 95%;
+    /* Quasi tutta la larghezza */
+    margin: 0 auto 20px;
+    /* Centrato con spazio sotto */
+    height: 150px;
+    /* Altezza per essere cliccabile */
+    background-color: #111;
+    /* Grigio leggermente diverso dallo sfondo */
+    border: 1px solid #333;
+    /* Bordo sottile */
     border-radius: 8px;
     display: flex;
-    flex-direction: column;     /* Icona sopra, testo sotto */
+    flex-direction: column;
+    /* Icona sopra, testo sotto */
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -328,11 +337,13 @@ body {
 }
 
 .add-box:hover {
-    background-color: #1a1a1a;       /* Si schiarisce al passaggio */
+    background-color: #1a1a1a;
+    /* Si schiarisce al passaggio */
 }
 
 .add-box i {
-    font-size: 2rem;            /* Icona del "+" grande */
+    font-size: 2rem;
+    /* Icona del "+" grande */
     color: #888;
 }
 
@@ -345,19 +356,25 @@ body {
 /* Footer Section */
 
 .footer {
-    position: fixed;            /* Rimane fisso sullo schermo */
+    position: fixed;
+    /* Rimane fisso sullo schermo */
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #000;     /* Sfondo nero pieno */
-    border-top: 1px solid #222; /* Linea di separazione sottile */
-    padding: 10px 0 20px;       /* Più padding sotto */
-    z-index: 100;               /* Sempre sopra agli altri elementi */
+    background-color: #000;
+    /* Sfondo nero pieno */
+    border-top: 1px solid #222;
+    /* Linea di separazione sottile */
+    padding: 10px 0 20px;
+    /* Più padding sotto */
+    z-index: 100;
+    /* Sempre sopra agli altri elementi */
 }
 
 .nav-list {
     display: flex;
-    justify-content: space-around; /* Distribuisce le 4 icone in modo equo */
+    justify-content: space-around;
+    /* Distribuisce le 4 icone in modo equo */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -365,9 +382,11 @@ body {
 
 .nav-list li a {
     text-decoration: none;
-    color: #888;                /* Colore icone non attive */
+    color: #888;
+    /* Colore icone non attive */
     display: flex;
-    flex-direction: column;     /* Icona sopra, testo sotto */
+    flex-direction: column;
+    /* Icona sopra, testo sotto */
     align-items: center;
     font-size: 0.7rem;
     gap: 5px;
@@ -375,15 +394,18 @@ body {
 
 /* Quando l'utente è sulla pagina Profilo (index.html) */
 .nav-list li a[aria-label="Profile"] {
-    color: white;               /* L'icona attiva diventa bianca */
+    color: white;
+    /* L'icona attiva diventa bianca */
 }
 
 .nav-list i {
-    font-size: 1.2rem;          /* Dimensione icone footer */
+    font-size: 1.2rem;
+    /* Dimensione icone footer */
 }
 
 main {
-    padding-bottom: 100px; /* Crea uno spazio per non far coprire i box dal footer */
+    padding-bottom: 100px;
+    /* Crea uno spazio per non far coprire i box dal footer */
 }
 
 
@@ -449,4 +471,66 @@ ul {
     /* Dimensione del testo (più grande) */
     cursor: pointer;
     /* Cambia il cursore in un 'puntatore' per indicare che è cliccabile */
+}
+
+/* Stile per la lista (ul) delle voci del menù laterale */
+.side-menu ul {
+    margin-top: 20px;
+    /* Crea uno spazio vuoto sopra la lista per separarla dall'intestazione (header) del menù */
+}
+
+/* Stile per i singoli elementi della lista (li) */
+.side-menu li {
+    margin-bottom: 10px;
+    /* Crea uno spazio vuoto sotto ogni voce per non farle sembrare troppo attaccate tra loro */
+}
+
+/* Stile per i link (a) cliccabili all'interno del menù */
+.side-menu a {
+    color: #e0e0e0;
+    /* Imposta un testo grigio chiaro che fa contrasto con lo sfondo nero senza affaticare la vista */
+    text-decoration: none;
+    /* Rimuove la fastidiosa sottolineatura predefinita dei link */
+    font-size: 1.1rem;
+    /* Aumenta leggermente la grandezza del testo per renderlo più leggibile */
+    display: flex;
+    /* Trasforma il link in un contenitore flessibile, essenziale per allineare icona e testo */
+    align-items: center;
+    /* Centra verticalmente l'icona rispetto al testo sulla stessa riga */
+    gap: 15px;
+    /* Imposta una distanza fissa (spazio vuoto) di 15px tra l'icona e il testo */
+    padding: 12px 15px;
+    /* Aggiunge spazio interno ingrandendo l'area cliccabile */
+    border-radius: 8px;
+    /* Arrotonda leggermente gli angoli del riquadro, visibile soprattutto all'hover */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Rende fluidi e morbidi (in 0.3 secondi) i cambiamenti di colore quando si fa hover */
+}
+
+/* Stato 'hover': cosa succede quando il mouse passa sopra il link */
+.side-menu a:hover {
+    background-color: #1a1a1a;
+    /* Mostra un riquadro di sfondo grigio scuro per evidenziare la selezione */
+    color: #ffffff;
+    /* Il testo, da grigio chiaro, diventa bianco puro brillante */
+}
+
+/* Stile per le icone (tag 'i' di FontAwesome) dentro i link */
+.side-menu a i {
+    font-size: 1.3rem;
+    /* Rende le icone leggermente più grandi del testo per dargli maggiore importanza */
+    width: 25px;
+    /* Impone una larghezza fissa. Evita che icone più larghe spostino il testo, mantenendo le scritte incolonnate */
+    text-align: center;
+    /* Centra le icone orizzontalmente nel loro blocco di 25px */
+    color: #888;
+    /* Imposta le icone a un grigio più scuro rispetto al testo di default */
+    transition: color 0.3s ease;
+    /* L'animazione fluida del colore si applica anche all'icona */
+}
+
+/* Cosa succede all'icona quando il mouse passa sopra il link intero */
+.side-menu a:hover i {
+    color: #ffffff;
+    /* Come il testo, anche l'icona si 'accende' diventando bianca quando selezionata */
 }
