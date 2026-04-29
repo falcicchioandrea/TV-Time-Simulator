@@ -261,7 +261,7 @@ body {
     font-size: 0.9rem;
 }
 
-.statistic-card > div,
+.statistic-card>div,
 .statistic-card .count-container {
     display: flex;
     justify-content: space-around;
@@ -297,28 +297,37 @@ body {
 
 /* SEZIONI FILM E SERIE TV */
 /* Applichiamo lo stesso stile a tutti gli header delle sezioni */
-[class*="__header"], .statistics-header {
-    display: flex;              
+[class*="__header"],
+.statistics-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 15px 10px; /* Più spazio sopra, meno sotto verso il box */
+    padding: 20px 15px 10px;
+    /* Più spazio sopra, meno sotto verso il box */
     color: white;
 }
 
 [class*="__header"] h2 i {
-    color: #ff4d4d; /* Colore rosso per il cuore dei preferiti */
+    color: #ff4d4d;
+    /* Colore rosso per il cuore dei preferiti */
     margin-right: 8px;
 }
 
 .add-box {
-    width: 95%;                 /* Quasi tutta la larghezza */
-    margin: 0 auto 20px;        /* Centrato con spazio sotto */
-    height: 150px;              /* Altezza per essere cliccabile */
-    background-color: #111;     /* Grigio leggermente diverso dallo sfondo */
-    border: 1px solid #333;     /* Bordo sottile */
+    width: 95%;
+    /* Quasi tutta la larghezza */
+    margin: 0 auto 20px;
+    /* Centrato con spazio sotto */
+    height: 150px;
+    /* Altezza per essere cliccabile */
+    background-color: #111;
+    /* Grigio leggermente diverso dallo sfondo */
+    border: 1px solid #333;
+    /* Bordo sottile */
     border-radius: 8px;
     display: flex;
-    flex-direction: column;     /* Icona sopra, testo sotto */
+    flex-direction: column;
+    /* Icona sopra, testo sotto */
     justify-content: center;
     align-items: center;
     gap: 15px;
@@ -327,11 +336,13 @@ body {
 }
 
 .add-box:hover {
-    background-color: #1a1a1a;       /* Si schiarisce al passaggio */
+    background-color: #1a1a1a;
+    /* Si schiarisce al passaggio */
 }
 
 .add-box i {
-    font-size: 2rem;            /* Icona del "+" grande */
+    font-size: 2rem;
+    /* Icona del "+" grande */
     color: #888;
 }
 
@@ -344,19 +355,25 @@ body {
 /* Footer Section */
 
 .footer {
-    position: fixed;            /* Rimane fisso sullo schermo */
+    position: fixed;
+    /* Rimane fisso sullo schermo */
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #000;     /* Sfondo nero pieno */
-    border-top: 1px solid #222; /* Linea di separazione sottile */
-    padding: 10px 0 20px;       /* Più padding sotto */
-    z-index: 100;               /* Sempre sopra agli altri elementi */
+    background-color: #000;
+    /* Sfondo nero pieno */
+    border-top: 1px solid #222;
+    /* Linea di separazione sottile */
+    padding: 10px 0 20px;
+    /* Più padding sotto */
+    z-index: 100;
+    /* Sempre sopra agli altri elementi */
 }
 
 .nav-list {
     display: flex;
-    justify-content: space-around; /* Distribuisce le 4 icone in modo equo */
+    justify-content: space-around;
+    /* Distribuisce le 4 icone in modo equo */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -364,9 +381,11 @@ body {
 
 .nav-list li a {
     text-decoration: none;
-    color: #888;                /* Colore icone non attive */
+    color: #888;
+    /* Colore icone non attive */
     display: flex;
-    flex-direction: column;     /* Icona sopra, testo sotto */
+    flex-direction: column;
+    /* Icona sopra, testo sotto */
     align-items: center;
     font-size: 0.7rem;
     gap: 5px;
@@ -374,15 +393,18 @@ body {
 
 /* Quando l'utente è sulla pagina Profilo (index.html) */
 .nav-list li a[aria-label="Profile"] {
-    color: white;               /* L'icona attiva diventa bianca */
+    color: white;
+    /* L'icona attiva diventa bianca */
 }
 
 .nav-list i {
-    font-size: 1.2rem;          /* Dimensione icone footer */
+    font-size: 1.2rem;
+    /* Dimensione icone footer */
 }
 
 main {
-    padding-bottom: 100px; /* Crea uno spazio per non far coprire i box dal footer */
+    padding-bottom: 100px;
+    /* Crea uno spazio per non far coprire i box dal footer */
 }
 
 
@@ -448,4 +470,124 @@ ul {
     /* Dimensione del testo (più grande) */
     cursor: pointer;
     /* Cambia il cursore in un 'puntatore' per indicare che è cliccabile */
+}
+
+/* --- SEZIONE LOGIN --- */
+.login-body {
+    display: flex;
+    /* Permette di centrare verticalmente e orizzontalmente */
+    justify-content: center;
+    /* Posiziona il contenuto al centro (orizzontalmente) */
+    align-items: center;
+    /* Posiziona il contenuto al centro (verticalmente) */
+    height: 100vh;
+    /* Occupa tutta l'altezza dello schermo */
+    background-color: #000;
+    /* Sfondo nero */
+}
+
+.login-container {
+    background-color: #111;
+    /* Sfondo grigio scuro */
+    border: 1px solid #333;
+    /* Bordo grigio scuro */
+    border-radius: 8px;
+    /* Angoli arrotondati */
+    padding: 40px 30px;
+    /* Spazio interno: 40px sopra/sotto, 30px ai lati */
+    width: 90%;
+    /* Larghezza: 90% dello schermo */
+    max-width: 400px;
+    /* Larghezza massima: non superare i 400px */
+    text-align: center;
+    /* Centra il testo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Ombra diffusa per staccare il box dallo sfondo */
+}
+
+/* Seleziona il titolo: TV Time */
+.login-header h1 {
+    font-size: 2rem;
+    /* Dimensione del carattere */
+    margin: 15px 0 5px;
+    /* Margine del titolo */
+}
+
+/* Seleziona il sottotitolo: Accedi per tracciare ciò che guardi. */
+.login-header p {
+    color: #888;
+    /* Colore del sottotitolo */
+    font-size: 0.9rem;
+    /* Dimensione del carattere */
+    margin-bottom: 30px;
+    /* Spazio sotto il sottotitolo */
+}
+
+/* Seleziona il logo*/
+.login-logo {
+    font-size: 3rem;
+    /* Dimensione del carattere */
+    color: #ffeb3b;
+    /* Colore del logo (lo stesso della campanella in alto a sx)*/
+}
+
+.login-form {
+    display: flex;
+    /* Permette di allineare gli elementi */
+    flex-direction: column;
+    /* Dispone gli elementi in colonna */
+    gap: 20px;
+    /* Aggiunge spazio tra gli elementi */
+}
+
+.input-group {
+    position: relative;
+    /* Per posizionare elementi in modo relativo all'interno del gruppo*/
+    display: flex;
+    /* Permette di allineare gli elementi */
+    align-items: center;
+    /* Posiziona il contenuto al centro (verticalmente) */
+}
+
+.input-group i {
+    position: absolute;
+    /* Per posizionare elementi in modo assoluto all'interno del gruppo*/
+    left: 15px;
+    /* Posiziona l'icona a 15px dal bordo sinistro */
+    color: #888;
+    /* Colore delle icone */
+}
+
+.input-group input {
+    width: 100%;
+    /* Occupa tutta la larghezza del gruppo */
+    padding: 15px 50px 15px 45px;
+    /* Spazio interno: 15px sopra/sotto, 50px a destra, 45px a sinistra */
+    border: 1px solid #333;
+    /* Bordo grigio scuro */
+    border-radius: 8px;
+    /* Angoli arrotondati */
+    background-color: #111;
+    /* Sfondo grigio scuro */
+    color: rgb(255, 255, 255);
+    /* Colore del testo */
+    font-size: 1rem;
+    /* Dimensione del carattere */
+}
+
+.login-btn {
+    background-color: transparent;      /* Sfondo trasparente */
+    color: white;                     /* Colore del testo */
+    border: 1px solid white;          /* Bordo bianco */
+    border-radius: 20px;                /* Angoli arrotondati */
+    padding: 12px;                      /* Spazio interno */
+    font-size: 1rem;                    /* Dimensione del carattere */
+    font-weight: bold;                  /* Testo in grassetto */
+    cursor: pointer;                    /* Cambia il cursore in un 'puntatore' per indicare che è cliccabile */
+    margin-top: 10px;                   /* Margine del bottone */
+}
+
+.login-btn:hover {
+    background-color: white;            /* Sfondo del bottone al passaggio del mouse */
+    color: black;                       /* Colore del testo al passaggio del mouse */
 }
