@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Gestione autenticazione
+    //---GESTIONE AUTENTICAZIONE---
 
     // Protezone pagine (se non si è su login.html si viene reinderizzati)
     const isLoginPage = window.location.pathname.endsWith("login.html");
@@ -38,7 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    const menuBtn = document.querySelector(".menu-btn");
+    // GESTIONE MENU HAMBURGER (visualizzazione e chiusura)
+    const menuBtn = document.getElementById("menu-btn");
     const closeBtn = document.getElementById("close-menu-btn");
     const sideMenu = document.getElementById("side-menu");
     const overlay = document.getElementById("menu-overlay");
